@@ -44,7 +44,7 @@ describe '#binary_multiple_of_4?' do
     expect { binary_multiple_of_4?('yes') }.not_to raise_error#::NoMethodError)
   end
   it 'classifies valid binary numbers [30 points]' , points: 30 do
-    %w[1010101010100 0101010101010100 100 0].each do |string|
+    %w[1010101010100 01010101010101001000].each do |string|
       expect(binary_multiple_of_4?(string)).to be_truthy,  "Incorrect results for input: \"#{string}\""
     end
     %w[101 1000000000001].each do |string|
